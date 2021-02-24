@@ -57,6 +57,11 @@ class ProductPage(BasePage):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
         "Success message is presented, but should not be"
 
+
+    def success_message_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message should be disappeared, but should not be"
+
     def should_not_be_item_basket(self):
         assert self.is_not_element_present(*BasketPageLocators.BASKET_ITEMS), \
         "Basket item is presented, but should not be"
